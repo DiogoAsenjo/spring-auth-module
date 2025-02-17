@@ -1,0 +1,17 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysqldb-local  # Nome único do container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: booking  # Nome do banco de dados
+      MYSQL_USER: springstudent  # Usuário do banco de dados
+      MYSQL_PASSWORD: springstudent  # Senha do usuário
+    ports:
+      - "3310:3306"  # Mapeando a porta 3306 do container para a porta 3310 do host (evitar conflito com instalação local)
+    volumes:
+      - mysql-data-local:/var/lib/mysql  # Volume exclusivo para esse projeto
+
+volumes:
+  mysql-data-local:
+    driver: local
