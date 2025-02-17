@@ -1,11 +1,15 @@
-# API para reserva de canoas individuais
+# Objective
+A base authentication system to be used in any project, providing login and JWT-based authentication with role-based access control
 
-Projeto criado para ser o backend do sistema de agendamento para uso de embarcações individuais.
+# How to run
+1. Clone the repository
+2. Generate the .jar file of the project by running: "./mvnw clean package"
+3. Start the Dockerized database using: "docker-compose up --build"
+4. Start the project!
 
-# Como rodar o projeto
-1. Clone o repositório
-2. Gere o .jar do projeto com o comando "./mvnw clean package"
-3. Suba o banco de dados dockerizado com o comando "docker-compose up --build"
-
-Pronto, agora você pode rodar o projeto na sua máquina!
-Obs.: é necessário ter Docker, Java 21 e Maven instalados na sua máquina.
+# Techonologies used
+1. Java
+2. Spring Boot
+3. JPA
+4. OAuth/JWT
+5. Docker
